@@ -82,6 +82,24 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FD1E28C627DC48E4B5EF4913E70F3EAA"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_7A78EC16B1C92224EE521ABE8271EB28"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FFE26A740067CD7B5C977DF9C8F00856"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_B5144DD5BA46934529539A2023A4CC70"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -107,24 +125,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_01C6EE0D2AF26D7D5BE293D101BF183E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FD1E28C627DC48E4B5EF4913E70F3EAA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7A78EC16B1C92224EE521ABE8271EB28"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FFE26A740067CD7B5C977DF9C8F00856"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -184,6 +184,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
     }
@@ -712,7 +720,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_1C3B8A0C35A345BD8738A563A2358465"
             {
-            "Name" = "8:Visual Spotter.exe"
+            "Name" = "8:Visual Spotter"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -726,7 +734,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7D86442F45F44CBCB05B4201B99C296E"
             {
-            "Name" = "8:Shortcut to OverlayController.exe"
+            "Name" = "8:Visual Spotter"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -735,7 +743,7 @@
             "Target" = "8:_FD1E28C627DC48E4B5EF4913E70F3EAA"
             "Folder" = "8:_1E74763BC925465B86769C014ED8A21F"
             "WorkingFolder" = "8:_E2438E84228C48B18417971392B360E7"
-            "Icon" = "8:"
+            "Icon" = "8:_E7B9727B28AC4070ABB6F0401C273F7D"
             "Feature" = "8:"
             }
         }
