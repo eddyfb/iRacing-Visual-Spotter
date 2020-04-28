@@ -1,0 +1,92 @@
+﻿<Window x:Class="OverlayController.MainWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:OverlayController"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True"
+        mc:Ignorable="d"
+        Title="Visual Spotter Controller" Height="375" Width="535" Closing="Window_Closing" Icon="icon.png" ResizeMode="CanMinimize"
+        AllowsTransparency="True" WindowStyle="None" Opacity=".97" >
+
+
+    <Grid Margin="5">
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="102"/>
+            <ColumnDefinition Width="102"/>
+            <ColumnDefinition Width="102"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="120"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="128"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="StartButton" Height="31" Width="100" FontSize="14" Content="Start Overlay" Grid.Column="0" Grid.Row="0" Click="StartButton_Click"/>
+
+
+
+
+        <TextBlock Text="One Car Color:" FontSize="14" Grid.Column="0" Grid.Row="1" />
+        <xctk:ColorPicker x:Name="ColorPicker1" Grid.Column="0" Grid.Row="1" Margin="2" Height="22" SelectedColor="Yellow" />
+
+        <TextBlock Text="Two Car Color:" FontSize="14" Grid.Column="1" Grid.Row="1" />
+        <xctk:ColorPicker x:Name="ColorPicker2" Grid.Column="1" Grid.Row="1" Margin="2" Height="22" SelectedColor="Red" />
+
+        <TextBlock Text="In The Midddle:" FontSize="14" Grid.Column="2" Grid.Row="1" />
+        <xctk:ColorPicker x:Name="ColorPicker3" Grid.Column="2" Grid.Row="1" Margin="2" Height="22" SelectedColor="Yellow" />
+
+
+        <TextBlock Text=" X Location:" FontSize="14" Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="2" Margin="5" />
+        <TextBlock Text="*( Pixels from top left of main display. Positive for right/down. Negative for left/up)" VerticalAlignment="Bottom" Margin="0,0,0,5" FontSize="14" Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="2" />
+        <TextBox x:Name="XLocation" Grid.Column="1" Grid.Row="2" Height="20" VerticalAlignment="Top" Text="0" PreviewTextInput="NumberValidationTextBoxWithNeg"/>
+        <TextBlock Text=" Y Location:" FontSize="14" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="2" Margin="5" />
+        <TextBox x:Name="YLocation"  Grid.Column="3" Grid.Row="2" VerticalAlignment="Top" Height="20" Text="0" PreviewTextInput="NumberValidationTextBoxWithNeg"/>
+
+        <TextBlock Text="Overlay Width:                  pixels" FontSize="14" Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="3" Margin="0,5,0,0" />
+        <TextBox x:Name="OverlayWidth" Grid.Column="1" Grid.Row="3" VerticalAlignment="Top" Height="20" Text="1920" PreviewTextInput="NumberValidationTextBox" />
+
+        <Grid Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="3">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="110"/>
+                <ColumnDefinition Width="100"/>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Indicator Height:                pixels" Margin="5" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" />
+            <TextBlock Text="Indicator Width:             (relative)" Margin="5"  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" />
+            <TextBlock Text="Space Between:              (relative)" Margin="5"  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" />
+            <TextBlock Text="Space to Edge:               (relative)" Margin="5"  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" />
+
+            <TextBox x:Name="IndicatorHeight" Grid.Column="1" Grid.Row="0"  Text="90" PreviewTextInput="NumberValidationTextBox"/>
+            <TextBox x:Name="IndicatorWidth" Grid.Column="1" Grid.Row="1"  Text="20" PreviewTextInput="NumberValidationTextBox"/>
+            <TextBox x:Name="SpaceBetweenIndicators" Grid.Column="1" Grid.Row="2" Text="50" PreviewTextInput="NumberValidationTextBox"/>
+            <TextBox x:Name="SpaceToEdge" Grid.Column="1"  Grid.Row="3" Text="30" PreviewTextInput="NumberValidationTextBox"/>
+
+        </Grid>
+
+
+
+
+        <TextBlock Text="Test location" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4" />
+        <CheckBox x:Name="TestBox" Grid.Column="0" Grid.Row="4" Margin="5,15,0,0" Checked="TestBox_Checked" Unchecked="TestBox_Unchecked" />
+
+
+        <Button x:Name="ApplyChangesButton" Height="31" Width="110" Content="Apply Changes" Grid.Column="4" Margin="1" Grid.Row="4" Click="ApplyChangesButton_Click" />
+
+    </Grid>
+</Window>
