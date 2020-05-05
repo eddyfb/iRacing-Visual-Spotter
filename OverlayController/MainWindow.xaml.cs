@@ -28,28 +28,33 @@ namespace OverlayController
     {
 
 
-        Overlay.MainWindow overlayWindow = new Overlay.MainWindow();
-        System.Windows.Forms.NotifyIcon ni = new System.Windows.Forms.NotifyIcon();
+        Overlay.MainWindow _overlayWindow = null;
+        System.Windows.Forms.NotifyIcon _ni = new System.Windows.Forms.NotifyIcon();
+
+        bool _testOverlay = false;
 
         public MainWindow()
         {
+
+
             InitializeComponent();
 
-            ni.Icon = new System.Drawing.Icon("spotter.ico");
-            ni.Visible = true;
-            ni.Text = "Visual Spotter Controller \n Overlay is NOT running.";
-            ni.ContextMenu = new System.Windows.Forms.ContextMenu();
-            ni.ContextMenu.MenuItems.Add("Exit");
-            ni.ContextMenu.MenuItems[0].Click +=
+            _ni.Icon = new System.Drawing.Icon("spotter.ico");
+            _ni.Visible = true;
+            _ni.Text = "Visual Spotter Controller \n Overlay is NOT running.";
+            _ni.ContextMenu = new System.Windows.Forms.ContextMenu();
+            _ni.ContextMenu.MenuItems.Add("Exit");
+            _ni.ContextMenu.MenuItems[0].Click +=
                                 delegate (object sender, EventArgs args)
                                 {
                                     ExitApplication();
                                 };
-            ni.DoubleClick +=
+            _ni.DoubleClick +=
                 delegate (object sender, EventArgs args)
                 {
                     this.Show();
                     this.WindowState = WindowState.Normal;
+                    this.Activate(); //Attempts to make this the topmost window 
                 };
 
 
@@ -57,50 +62,39 @@ namespace OverlayController
 
             OverlayWidth.Text = Screen.PrimaryScreen.WorkingArea.Width.ToString();
             IndicatorHeight.Text = ((Screen.PrimaryScreen.Bounds.Height)/12).ToString();
+
+            CheckIfRunning();
+
+            DispatcherTimer mediaTimer = new DispatcherTimer();
+            mediaTimer.Interval = TimeSpan.FromSeconds(5);
+            mediaTimer.Tick += new EventHandler(mediaTimer_Tick);
+            mediaTimer.Start();
+
         }
 
 
         #region UI interaction methods
 
-        private void StartButton_Click(object sender, RoutedEventArgs e)
+        private void TestBox_Checked(object sender, RoutedEventArgs e)
         {
-            if (StartButton.Content.ToString() == "Start Overlay")
-            {
-                StartButton.Content = "Close Overlay";
-                ni.Text = "Visual Spotter Controller \n Overlay IS running.";
-                overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, Color.FromArgb(0, 0, 0, 0), YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text);
-                overlayWindow.Show();
-                overlayWindow.Activate();
-                if (TestBox.IsChecked == true)
-                {
-                    TestBox.IsChecked = false;
-                }
-            }
-            else
+            if (_overlayWindow != null)
             {
                 CloseOverlay();
             }
-        }
-
-        private void TestBox_Checked(object sender, RoutedEventArgs e)
-        {
-            ni.Text = "Visual Spotter Controller \n Overlay IS running.";
-            overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, ColorPicker1.SelectedColor.Value, YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text);
-            overlayWindow.Show();
-            overlayWindow.Activate();
+                _ni.Text = "Visual Spotter Controller \n Overlay IS running.";
+                _overlayWindow = new Overlay.MainWindow();
+                _overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, ColorPicker1.SelectedColor.Value, YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text);
+                _overlayWindow.Show();
+                _overlayWindow.Activate();
+                _testOverlay = true;
         }
 
         private void TestBox_Unchecked(object sender, RoutedEventArgs e)
         {
-            if (StartButton.Content.ToString() == "Close Overlay")
-            {
-                overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, Color.FromArgb(0, 0, 0, 0), YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text);
-            }
-            else
-            {
-                ni.Text = "Visual Spotter Controller \n Overlay is NOT running.";
-                overlayWindow.Hide();
-            }
+            _ni.Text = "Visual Spotter Controller \n Overlay is NOT running.";
+            CloseOverlay();
+            _testOverlay = false;
+
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -122,24 +116,35 @@ namespace OverlayController
 
         private void CloseOverlay()
         {
-            StartButton.Content = "Start Overlay";
-            ni.Text = "Visual Spotter Controller \n Overlay is NOT running.";
-            overlayWindow.Hide();
-            if (TestBox.IsChecked == true)
+            _ni.Text = "Visual Spotter Controller \n Overlay is NOT running.";
+            if (_overlayWindow != null)
             {
-                TestBox.IsChecked = false;
+                _overlayWindow.Close();
+                _overlayWindow = null;
             }
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            ni.Dispose();
-            overlayWindow.Close();
+            _ni.Dispose();
+            CloseOverlay();
+            ExitApplication();
+        }
+
+        private void CheckIfRunning()
+        {
+            if (Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length > 1)
+            {
+                if (System.Windows.MessageBox.Show("Visual Spotter already running. Only one instance of this application is allowed.", "Visual Spotter Already Running", MessageBoxButton.OK, MessageBoxImage.Stop) == MessageBoxResult.OK)
+                {
+                    ExitApplication();
+                }
+            }
         }
 
         private void ExitApplication()
         {
-            this.Close();
+            System.Environment.Exit(0);
         }
 
 
@@ -165,10 +170,47 @@ namespace OverlayController
 
         private void ApplyChanges()
         {
-            overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, Color.FromArgb(0, 0, 0, 0), YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text);
             if (TestBox.IsChecked == true)
             {
-                overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, ColorPicker1.SelectedColor.Value, YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text);
+                _testOverlay = true;
+                _overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, ColorPicker1.SelectedColor.Value, YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text);
+            }
+        }
+
+        private void StartOverlay()
+        {
+            if (TestBox.IsChecked == true)
+            {
+                _testOverlay = true;
+                _overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, ColorPicker1.SelectedColor.Value, YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text);
+            }
+            else
+            {
+                _overlayWindow = new Overlay.MainWindow();
+                _overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, Color.FromArgb(0, 0, 0, 0), YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text);
+                _overlayWindow.Show();
+                _overlayWindow.Activate();
+            }
+            _ni.Text = "Visual Spotter Controller \n Overlay IS running.";
+        }
+
+
+        private void mediaTimer_Tick(object sender, EventArgs e)
+        {
+            if (_testOverlay == false)
+            {
+                if (Process.GetProcessesByName("iRacingSim64DX11").Length == 1 && _overlayWindow == null)
+                {
+
+                    StartOverlay();
+
+                    iRacingDetecionText.Text = "iRacing IS RUNNING.";
+                }
+                else if (Process.GetProcessesByName("iRacingSim64DX11").Length == 0 && _overlayWindow != null)
+                {
+                    iRacingDetecionText.Text = "iRacing NOT detected running.";
+                    CloseOverlay();
+                }
             }
         }
 

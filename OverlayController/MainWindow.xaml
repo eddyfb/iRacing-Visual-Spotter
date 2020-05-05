@@ -8,7 +8,7 @@
         xmlns:ui="http://schemas.modernwpf.com/2019"
         ui:WindowHelper.UseModernWindowStyle="True"
         mc:Ignorable="d"
-        Title="Visual Spotter Controller" Height="375" Width="535" Closing="Window_Closing" Icon="icon.png" ResizeMode="CanMinimize"
+        Title="Visual Spotter Controller" Height="375" Width="540" Closing="Window_Closing" Icon="icon.png" ResizeMode="CanMinimize"
         AllowsTransparency="True" WindowStyle="None" Opacity=".97" >
 
 
@@ -29,7 +29,8 @@
             <RowDefinition Height="128"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <Button x:Name="StartButton" Height="31" Width="100" FontSize="14" Content="Start Overlay" Grid.Column="0" Grid.Row="0" Click="StartButton_Click"/>
+
+        <TextBlock x:Name="iRacingDetecionText" Text="iRacing NOT detected running." FontSize="14" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" />
 
 
 
@@ -57,7 +58,7 @@
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="110"/>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="110"/>
 
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -86,7 +87,7 @@
         <CheckBox x:Name="TestBox" Grid.Column="0" Grid.Row="4" Margin="5,15,0,0" Checked="TestBox_Checked" Unchecked="TestBox_Unchecked" />
 
 
-        <Button x:Name="ApplyChangesButton" Height="31" Width="110" Content="Apply Changes" Grid.Column="4" Margin="1" Grid.Row="4" Click="ApplyChangesButton_Click" />
+        <Button x:Name="ApplyChangesButton" Height="31" Width="112" Content="Apply Changes" Grid.Column="4" Margin="0" Grid.Row="4" Click="ApplyChangesButton_Click" />
 
     </Grid>
 </Window>

@@ -40,3 +40,5 @@ C:\VisualSpotterDev\iRacing-Visual-Spotter\Overlay\obj\Debug\Overlay.application
 C:\VisualSpotterDev\iRacing-Visual-Spotter\Overlay\obj\Debug\Overlay.csproj.CopyComplete
 C:\VisualSpotterDev\iRacing-Visual-Spotter\Overlay\obj\Debug\Overlay.exe
 C:\VisualSpotterDev\iRacing-Visual-Spotter\Overlay\obj\Debug\Overlay.pdb
+C:\VisualSpotterDev\iRacing-Visual-Spotter\Overlay\bin\Debug\iRacingSdkWrapper.dll
+C:\VisualSpotterDev\iRacing-Visual-Spotter\Overlay\bin\Debug\YamlDotNet.dll

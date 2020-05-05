@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="OverlayController.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="OverlayController.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="spotter.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="OverlayController" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="OverlayController" version="1.0.2.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="OverlayController.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -540,14 +540,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="iRSDKSharp.dll" size="13824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="iRacingSdkWrapper.dll" size="38400">
+      <assemblyIdentity name="iRacingSdkWrapper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>jR532zQ9cG6X7hEVl5zS+pgdlVehmh8DEk2ubV5JlRg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="iRSDKSharp.dll" size="15360">
       <assemblyIdentity name="iRSDKSharp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8ISQY7bhK63wNcBkcV+ODlME6CakQl5hoCfhNTAbOvw=</dsig:DigestValue>
+        <dsig:DigestValue>04zndwijHYk6gGinKQHSGrnW3zr0OnRkV7aPD6JV5IM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -739,19 +751,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>b5AU5rRYDDYc/aXrES8oX2/F5iV1+nnOdMviWRuqlFM=</dsig:DigestValue>
+        <dsig:DigestValue>BdIAHtkJZRckhk5oEbaIaoygjnGTr/ouI673J/3tiXo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OverlayController.exe" size="25536">
-      <assemblyIdentity name="OverlayController" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OverlayController.exe" size="26048">
+      <assemblyIdentity name="OverlayController" version="1.0.2.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>htEmI4s9mh3mb9HGUzFApNb9wqXt+EqYX9ib/sPhOWA=</dsig:DigestValue>
+        <dsig:DigestValue>zv8K/7oPe3k5I82lOnz2domzAwvb6nIKDlyACJcVxOI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -968,6 +980,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>uIZ1+n1AaWwtaiGMeiKKvHksB4PZCCUiYDxzuRKURTE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YamlDotNet.dll" size="139776">
+      <assemblyIdentity name="YamlDotNet" version="3.7.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>R8GbxwbDN2e8K2ThGpFn6JyEC6Qe3qlsPuXxpyAguhU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

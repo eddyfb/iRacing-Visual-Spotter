@@ -42,14 +42,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="iRSDKSharp.dll" size="13824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="iRacingSdkWrapper.dll" size="38400">
+      <assemblyIdentity name="iRacingSdkWrapper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>jR532zQ9cG6X7hEVl5zS+pgdlVehmh8DEk2ubV5JlRg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="iRSDKSharp.dll" size="15360">
       <assemblyIdentity name="iRSDKSharp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8ISQY7bhK63wNcBkcV+ODlME6CakQl5hoCfhNTAbOvw=</dsig:DigestValue>
+        <dsig:DigestValue>04zndwijHYk6gGinKQHSGrnW3zr0OnRkV7aPD6JV5IM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +73,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Rln4nS8/wLHBfMhYRtjOiA/X/lmRjTd6cmV/gS4G2/g=</dsig:DigestValue>
+        <dsig:DigestValue>NcvIt59RvCJ33/DFnInilLDpWHag4IgIqNq8PBTL1wE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YamlDotNet.dll" size="139776">
+      <assemblyIdentity name="YamlDotNet" version="3.7.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>R8GbxwbDN2e8K2ThGpFn6JyEC6Qe3qlsPuXxpyAguhU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
