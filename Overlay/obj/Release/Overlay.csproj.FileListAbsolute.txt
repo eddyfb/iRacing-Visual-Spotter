@@ -21,3 +21,4 @@ C:\VisualSpotterDev\iRacing-Visual-Spotter\Overlay\obj\Release\Overlay.applicati
 C:\VisualSpotterDev\iRacing-Visual-Spotter\Overlay\obj\Release\Overlay.csproj.CopyComplete
 C:\VisualSpotterDev\iRacing-Visual-Spotter\Overlay\obj\Release\Overlay.exe
 C:\VisualSpotterDev\iRacing-Visual-Spotter\Overlay\obj\Release\Overlay.pdb
+C:\VisualSpotterDev\iRacing-Visual-Spotter\Overlay\bin\Release\iRacingSimulator.dll

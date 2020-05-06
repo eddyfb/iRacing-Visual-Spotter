@@ -65,6 +65,9 @@
     <Reference Include="iRacingSdkWrapper">
       <HintPath>.\iRacingSdkWrapper.dll</HintPath>
     </Reference>
+    <Reference Include="iRacingSimulator">
+      <HintPath>.\iRacingSimulator.dll</HintPath>
+    </Reference>
     <Reference Include="iRSDKSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\iRSDKSharp.dll</HintPath>

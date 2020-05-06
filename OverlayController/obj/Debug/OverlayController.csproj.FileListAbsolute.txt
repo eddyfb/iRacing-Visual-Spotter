@@ -362,3 +362,4 @@ C:\VisualSpotterDev\iRacing-Visual-Spotter\OverlayController\obj\Debug\OverlayCo
 C:\VisualSpotterDev\iRacing-Visual-Spotter\OverlayController\obj\Debug\OverlayController.pdb
 C:\VisualSpotterDev\iRacing-Visual-Spotter\OverlayController\bin\Debug\iRacingSdkWrapper.dll
 C:\VisualSpotterDev\iRacing-Visual-Spotter\OverlayController\bin\Debug\YamlDotNet.dll
+C:\VisualSpotterDev\iRacing-Visual-Spotter\OverlayController\bin\Debug\iRacingSimulator.dll

@@ -49,7 +49,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jR532zQ9cG6X7hEVl5zS+pgdlVehmh8DEk2ubV5JlRg=</dsig:DigestValue>
+        <dsig:DigestValue>dYVRYTV+HVnClD0UwLg+7YtAa4UkwMrTjgAUqPUblZM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="iRacingSimulator.dll" size="67584">
+      <assemblyIdentity name="iRacingSimulator" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>H5OFt5KessI69cCH9WXeSDLhCREuKZss0i2xn2uwyvg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Overlay.exe" size="13248">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Overlay.exe" size="17344">
       <assemblyIdentity name="Overlay" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NcvIt59RvCJ33/DFnInilLDpWHag4IgIqNq8PBTL1wE=</dsig:DigestValue>
+        <dsig:DigestValue>XC1nC844468BmMQYJ53XL9NB553UCw50B7BNuSCYZ4s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

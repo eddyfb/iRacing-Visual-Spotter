@@ -83,7 +83,7 @@ namespace OverlayController
             }
                 _ni.Text = "Visual Spotter Controller \n Overlay IS running.";
                 _overlayWindow = new Overlay.MainWindow();
-                _overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, ColorPicker1.SelectedColor.Value, YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text);
+                _overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, ColorPicker1.SelectedColor.Value, YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text, double.Parse(WarningDistance.Text), ColorPicker4.SelectedColor.Value);
                 _overlayWindow.Show();
                 _overlayWindow.Activate();
                 _testOverlay = true;
@@ -160,6 +160,12 @@ namespace OverlayController
             e.Handled = regex.IsMatch(e.Text);
         }
 
+        private void NumberValidationTextBoxWithDec(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+.");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
         protected override void OnStateChanged(EventArgs e)
         {
             if (WindowState == System.Windows.WindowState.Minimized)
@@ -173,7 +179,7 @@ namespace OverlayController
             if (TestBox.IsChecked == true)
             {
                 _testOverlay = true;
-                _overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, ColorPicker1.SelectedColor.Value, YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text);
+                _overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, ColorPicker1.SelectedColor.Value, YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text, double.Parse(WarningDistance.Text), ColorPicker4.SelectedColor.Value);
             }
         }
 
@@ -182,12 +188,12 @@ namespace OverlayController
             if (TestBox.IsChecked == true)
             {
                 _testOverlay = true;
-                _overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, ColorPicker1.SelectedColor.Value, YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text);
+                _overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, ColorPicker1.SelectedColor.Value, YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text, double.Parse(WarningDistance.Text), ColorPicker4.SelectedColor.Value);
             }
             else
             {
                 _overlayWindow = new Overlay.MainWindow();
-                _overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, Color.FromArgb(0, 0, 0, 0), YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text);
+                _overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, Color.FromArgb(0, 0, 0, 0), YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text, double.Parse(WarningDistance.Text), ColorPicker4.SelectedColor.Value);
                 _overlayWindow.Show();
                 _overlayWindow.Activate();
             }

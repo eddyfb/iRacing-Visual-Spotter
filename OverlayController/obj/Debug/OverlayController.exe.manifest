@@ -547,7 +547,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jR532zQ9cG6X7hEVl5zS+pgdlVehmh8DEk2ubV5JlRg=</dsig:DigestValue>
+        <dsig:DigestValue>dYVRYTV+HVnClD0UwLg+7YtAa4UkwMrTjgAUqPUblZM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="iRacingSimulator.dll" size="67584">
+      <assemblyIdentity name="iRacingSimulator" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>H5OFt5KessI69cCH9WXeSDLhCREuKZss0i2xn2uwyvg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -744,26 +756,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Overlay.exe" size="12288">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Overlay.exe" size="16384">
       <assemblyIdentity name="Overlay" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BdIAHtkJZRckhk5oEbaIaoygjnGTr/ouI673J/3tiXo=</dsig:DigestValue>
+        <dsig:DigestValue>xobMTtl0mUS3IIWvGzwqU0NvyPrCiOTUpWoGQi1b2SE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OverlayController.exe" size="26048">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OverlayController.exe" size="27072">
       <assemblyIdentity name="OverlayController" version="1.0.2.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zv8K/7oPe3k5I82lOnz2domzAwvb6nIKDlyACJcVxOI=</dsig:DigestValue>
+        <dsig:DigestValue>YkWo9XFvlUOKFcdTJVqXq1+MEF2JA9U+89qSg+yOUnI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -160,3 +160,4 @@ C:\VisualSpotterDev\iRacing-Visual-Spotter\OverlayController\obj\Release\Overlay
 C:\VisualSpotterDev\iRacing-Visual-Spotter\OverlayController\obj\Release\OverlayController.csproj.CopyComplete
 C:\VisualSpotterDev\iRacing-Visual-Spotter\OverlayController\obj\Release\OverlayController.exe
 C:\VisualSpotterDev\iRacing-Visual-Spotter\OverlayController\obj\Release\OverlayController.pdb
+C:\VisualSpotterDev\iRacing-Visual-Spotter\OverlayController\bin\Release\iRacingSimulator.dll
