@@ -65,6 +65,8 @@ namespace OverlayController
 
             CheckIfRunning();
 
+            LoadProgramSettings();
+
             DispatcherTimer mediaTimer = new DispatcherTimer();
             mediaTimer.Interval = TimeSpan.FromSeconds(5);
             mediaTimer.Tick += new EventHandler(mediaTimer_Tick);
@@ -181,6 +183,7 @@ namespace OverlayController
                 _testOverlay = true;
                 _overlayWindow.Settings(ColorPicker1.SelectedColor.Value, ColorPicker2.SelectedColor.Value, ColorPicker3.SelectedColor.Value, ColorPicker1.SelectedColor.Value, YLocation.Text, XLocation.Text, IndicatorHeight.Text, OverlayWidth.Text, IndicatorWidth.Text, SpaceBetweenIndicators.Text, SpaceToEdge.Text, double.Parse(WarningDistance.Text), ColorPicker4.SelectedColor.Value);
             }
+            SaveProgramSettings();
         }
 
         private void StartOverlay()
@@ -216,6 +219,44 @@ namespace OverlayController
                 {
                     iRacingDetecionText.Text = "iRacing NOT detected running.";
                     CloseOverlay();
+                }
+            }
+        }
+
+        private void SaveProgramSettings()
+        {
+            Properties.Settings.Default.OneCarColor = System.Drawing.Color.FromArgb(ColorPicker1.SelectedColor.Value.A, ColorPicker1.SelectedColor.Value.R, ColorPicker1.SelectedColor.Value.G, ColorPicker1.SelectedColor.Value.B);
+            Properties.Settings.Default.TwoCarColor = System.Drawing.Color.FromArgb(ColorPicker2.SelectedColor.Value.A, ColorPicker2.SelectedColor.Value.R, ColorPicker2.SelectedColor.Value.G, ColorPicker2.SelectedColor.Value.B);
+            Properties.Settings.Default.InTheMiddleColor = System.Drawing.Color.FromArgb(ColorPicker3.SelectedColor.Value.A, ColorPicker3.SelectedColor.Value.R, ColorPicker3.SelectedColor.Value.G, ColorPicker3.SelectedColor.Value.B);
+            Properties.Settings.Default.FasterClassColor = System.Drawing.Color.FromArgb(ColorPicker4.SelectedColor.Value.A, ColorPicker4.SelectedColor.Value.R, ColorPicker4.SelectedColor.Value.G, ColorPicker4.SelectedColor.Value.B);
+            Properties.Settings.Default.FasterClassDistance = WarningDistance.Text;
+            Properties.Settings.Default.XLocation = XLocation.Text;
+            Properties.Settings.Default.YLocation = YLocation.Text;
+            Properties.Settings.Default.OverlayWidth = OverlayWidth.Text;
+            Properties.Settings.Default.IndicatorHeight = IndicatorHeight.Text;
+            Properties.Settings.Default.IndicatorWidth = IndicatorWidth.Text;
+            Properties.Settings.Default.SpaceBetween = SpaceBetweenIndicators.Text;
+            Properties.Settings.Default.SpaceToEdge = SpaceToEdge.Text;
+            Properties.Settings.Default.Save();
+        }
+        private void LoadProgramSettings()
+        {
+            if (Properties.Settings.Default.OneCarColor != null)
+            {
+                if (Properties.Settings.Default.OneCarColor.IsEmpty == false)
+                {
+                    ColorPicker1.SelectedColor = Color.FromArgb(Properties.Settings.Default.OneCarColor.A, Properties.Settings.Default.OneCarColor.R, Properties.Settings.Default.OneCarColor.G, Properties.Settings.Default.OneCarColor.B);
+                    ColorPicker2.SelectedColor = Color.FromArgb(Properties.Settings.Default.TwoCarColor.A, Properties.Settings.Default.TwoCarColor.R, Properties.Settings.Default.TwoCarColor.G, Properties.Settings.Default.TwoCarColor.B);
+                    ColorPicker3.SelectedColor = Color.FromArgb(Properties.Settings.Default.InTheMiddleColor.A, Properties.Settings.Default.InTheMiddleColor.R, Properties.Settings.Default.InTheMiddleColor.G, Properties.Settings.Default.InTheMiddleColor.B);
+                    ColorPicker4.SelectedColor = Color.FromArgb(Properties.Settings.Default.FasterClassColor.A, Properties.Settings.Default.FasterClassColor.R, Properties.Settings.Default.FasterClassColor.G, Properties.Settings.Default.FasterClassColor.B);
+                    WarningDistance.Text = Properties.Settings.Default.FasterClassDistance;
+                    XLocation.Text = Properties.Settings.Default.XLocation;
+                    YLocation.Text = Properties.Settings.Default.YLocation;
+                    OverlayWidth.Text = Properties.Settings.Default.OverlayWidth;
+                    IndicatorHeight.Text = Properties.Settings.Default.IndicatorHeight;
+                    IndicatorWidth.Text = Properties.Settings.Default.IndicatorWidth;
+                    SpaceBetweenIndicators.Text = Properties.Settings.Default.SpaceBetween;
+                    SpaceToEdge.Text = Properties.Settings.Default.SpaceToEdge;
                 }
             }
         }

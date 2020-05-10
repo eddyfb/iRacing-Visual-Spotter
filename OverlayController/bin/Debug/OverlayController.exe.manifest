@@ -763,19 +763,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xobMTtl0mUS3IIWvGzwqU0NvyPrCiOTUpWoGQi1b2SE=</dsig:DigestValue>
+        <dsig:DigestValue>HODwAibAisfy3d5lXnh8FtR70aU3mme71GLNhN2WO9k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OverlayController.exe" size="27072">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OverlayController.exe" size="30656">
       <assemblyIdentity name="OverlayController" version="1.0.2.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YkWo9XFvlUOKFcdTJVqXq1+MEF2JA9U+89qSg+yOUnI=</dsig:DigestValue>
+        <dsig:DigestValue>BaZpajgxKwwlXdNXVi7PyekfrEwVQmqtRn7NLSLQB1A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1007,13 +1007,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="OverlayController.exe.config" size="18072">
+  <file name="OverlayController.exe.config" size="19829">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>i6aC4MPJC/X8IedfZYhPODlxDGE2WlUh58gHPjYrAcE=</dsig:DigestValue>
+      <dsig:DigestValue>FfxW3Dh24KOk/CqX6hubz4s8UKhixWqzx7QDfRXoA5k=</dsig:DigestValue>
     </hash>
   </file>
   <file name="spotter.ico" size="3782">

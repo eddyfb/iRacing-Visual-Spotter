@@ -39,6 +39,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_54C2B7C551062B8058073BE64F240B4C"
+        "OwnerKey" = "8:_C8EB7799B974EBD8F0E58DF595857835"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5D39309A96334AA9AC82D9010A391077"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6C8C846F06E33DEEF2BB2901EE8C2AD8"
         "OwnerKey" = "8:_6FB8AD1FB7C04DE5ACF6C03C88AD5753"
         "MsmSig" = "8:_UNDEFINED"
@@ -65,6 +77,12 @@
         {
         "MsmKey" = "8:_B5144DD5BA46934529539A2023A4CC70"
         "OwnerKey" = "8:_54C2B7C551062B8058073BE64F240B4C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C8EB7799B974EBD8F0E58DF595857835"
+        "OwnerKey" = "8:_FFE26A740067CD7B5C977DF9C8F00856"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -107,6 +125,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_FFE26A740067CD7B5C977DF9C8F00856"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C8EB7799B974EBD8F0E58DF595857835"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -359,6 +383,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5D39309A96334AA9AC82D9010A391077"
+            {
+            "SourcePath" = "8:..\\OverlayController\\obj\\Debug\\OverlayController.exe.config"
+            "TargetName" = "8:OverlayController.exe.config"
+            "Tag" = "8:"
+            "Folder" = "8:_E2438E84228C48B18417971392B360E7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6C8C846F06E33DEEF2BB2901EE8C2AD8"
             {
             "AssemblyRegister" = "3:1"
@@ -503,6 +547,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C8EB7799B974EBD8F0E58DF595857835"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:iRacingSimulator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_C8EB7799B974EBD8F0E58DF595857835"
+                    {
+                    "Name" = "8:iRacingSimulator.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:iRacingSimulator.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_E2438E84228C48B18417971392B360E7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DCF127DEFF683531CE0787C181380E0E"
             {
             "AssemblyRegister" = "3:1"
@@ -558,7 +633,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:OverlayController, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:OverlayController, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_FD1E28C627DC48E4B5EF4913E70F3EAA"
@@ -683,15 +758,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Visual Spotter"
-        "ProductCode" = "8:{7E399CBD-BA38-48CF-83B1-2B1919BE81D7}"
-        "PackageCode" = "8:{C322B1B6-C917-4387-BFA0-C100DCEEF60D}"
+        "ProductCode" = "8:{24A1E770-EC1E-45E1-95A7-187EF43B1A14}"
+        "PackageCode" = "8:{70C5AB06-996F-4BA8-B9B4-353F9BB09A4B}"
         "UpgradeCode" = "8:{07081C54-4244-4C30-BA3C-E64843E2761D}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.2"
+        "ProductVersion" = "8:1.0.3"
         "Manufacturer" = "8:EdwardFBittner"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

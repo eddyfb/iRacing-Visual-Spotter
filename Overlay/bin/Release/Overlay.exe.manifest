@@ -49,19 +49,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jR532zQ9cG6X7hEVl5zS+pgdlVehmh8DEk2ubV5JlRg=</dsig:DigestValue>
+        <dsig:DigestValue>dYVRYTV+HVnClD0UwLg+7YtAa4UkwMrTjgAUqPUblZM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="iRacingSimulator.dll" size="68096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="iRacingSimulator.dll" size="67584">
       <assemblyIdentity name="iRacingSimulator" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Qsbi5MwiPggNxf/IlC1cZmuccILiPUfkzmj1yKg1J44=</dsig:DigestValue>
+        <dsig:DigestValue>H5OFt5KessI69cCH9WXeSDLhCREuKZss0i2xn2uwyvg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -85,7 +85,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HR8xxyBxdTIABsI553Zzgjs/NH9mVDKkFk5SMoO+qZ8=</dsig:DigestValue>
+        <dsig:DigestValue>5FuXNU9liP44dhaGRlOS8pmG7uMYXBgO6JpRZjE2w4s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

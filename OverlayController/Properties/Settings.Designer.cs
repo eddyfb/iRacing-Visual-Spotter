@@ -22,5 +22,145 @@ namespace OverlayController.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color OneCarColor {
+            get {
+                return ((global::System.Drawing.Color)(this["OneCarColor"]));
+            }
+            set {
+                this["OneCarColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color TwoCarColor {
+            get {
+                return ((global::System.Drawing.Color)(this["TwoCarColor"]));
+            }
+            set {
+                this["TwoCarColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color InTheMiddleColor {
+            get {
+                return ((global::System.Drawing.Color)(this["InTheMiddleColor"]));
+            }
+            set {
+                this["InTheMiddleColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color FasterClassColor {
+            get {
+                return ((global::System.Drawing.Color)(this["FasterClassColor"]));
+            }
+            set {
+                this["FasterClassColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FasterClassDistance {
+            get {
+                return ((string)(this["FasterClassDistance"]));
+            }
+            set {
+                this["FasterClassDistance"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string XLocation {
+            get {
+                return ((string)(this["XLocation"]));
+            }
+            set {
+                this["XLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string YLocation {
+            get {
+                return ((string)(this["YLocation"]));
+            }
+            set {
+                this["YLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string OverlayWidth {
+            get {
+                return ((string)(this["OverlayWidth"]));
+            }
+            set {
+                this["OverlayWidth"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string IndicatorHeight {
+            get {
+                return ((string)(this["IndicatorHeight"]));
+            }
+            set {
+                this["IndicatorHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string IndicatorWidth {
+            get {
+                return ((string)(this["IndicatorWidth"]));
+            }
+            set {
+                this["IndicatorWidth"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SpaceBetween {
+            get {
+                return ((string)(this["SpaceBetween"]));
+            }
+            set {
+                this["SpaceBetween"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SpaceToEdge {
+            get {
+                return ((string)(this["SpaceToEdge"]));
+            }
+            set {
+                this["SpaceToEdge"] = value;
+            }
+        }
     }
 }
