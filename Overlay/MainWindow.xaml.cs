@@ -210,11 +210,13 @@ namespace Overlay
                 {
                     //1 car left
                     CarLeftIndicator.Fill = singleColor;
+                    CarRightIndicator.Fill = Brushes.Transparent;
                 }
                 else if (_carLR == "3")
                 {
                     //1 car right
                     CarRightIndicator.Fill = singleColor;
+                    CarLeftIndicator.Fill = Brushes.Transparent;
                 }
                 else if (_carLR == "4")
                 {
@@ -226,12 +228,14 @@ namespace Overlay
                 {
                     //2(+?) cars left
                     CarLeftIndicator.Fill = doubleColor;
+                    CarRightIndicator.Fill = Brushes.Transparent;
 
                 }
                 else if (_carLR == "6")
                 {
                     //2(+?) cars right
                     CarRightIndicator.Fill = doubleColor;
+                    CarLeftIndicator.Fill = Brushes.Transparent;
                 }
             }
         }
